@@ -1,0 +1,145 @@
+/* --- Theme (tweak to your colors) --- */
+:root{
+    --brand-blue:#6CCFF6;   /* light blue */
+    --brand-orange:#FFB677; /* light orange */
+    --border:#000;          /* black divider */
+    --card-bg:#f7f7f8;      /* light gray card bg */
+    --text:#222;
+    --muted:#6b7280;
+  }
+  
+  /* Hero section you already have */
+  #title{
+    border:1px solid var(--border);
+    background-color: lightblue; /* keep or swap: var(--brand-blue) with transparency if you like */
+  }
+  
+  .text-orange{ color: orangered; /* or var(--brand-orange) */ }
+
+  .text-blue{ color: #002147; }
+  
+  /* --- About section layout (MERGE your duplicate #about into this) --- */
+  #about{
+    border:1px solid var(--border);
+    background: lightsalmon; /* temp; replace with var(--card-bg) or remove if you prefer cards only */
+    padding-block: 3rem;
+  }
+  
+  .container{ max-width:100%; margin-inline:auto; padding-inline:1rem; }
+  
+    .about-card{ grid-area: about; }
+    .skills-card{ grid-area: skills; }
+    .experience-card{ grid-area: experience; }
+
+  /* Grid wrapper */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr;         /* mobile: single column */
+    grid-template-areas:
+    "about"
+    "skills"
+    "experience";
+    gap:2.5rem;
+  }
+  
+  /* Mobile divider between the two columns */
+  .about-grid > * + *{
+    border-top:2px solid var(--border);
+    padding-top:2rem;
+  }
+  
+  /* Desktop: 2 columns + vertical divider */
+  @media (min-width: 768px){
+    .about-grid{
+        grid-template-columns: minmax(280px, 1fr) 1fr;
+        grid-template-areas:
+          "about   experience"
+          "skills  experience";
+        gap:3rem;
+        align-items:start;
+        grid-auto-rows: 1fr; /* equal heights */
+      }
+    
+
+    /* vertical divider ONLY for the right column */
+    .experience-card{
+        border-left:2px solid var(--border);
+        padding-left:3rem;
+    }
+
+    .about-grid > * + *{
+      border-top:none;
+      padding-top:0;
+      border-left:2px solid var(--border);
+      padding-left:3rem;
+    }
+  }
+  
+  /* Cards */
+  .about-card, .skills-card, .experience-card{
+    background: var(--card-bg);
+    border: solid black 2px;
+    border-radius:12px;
+    padding:1.25rem 1.25rem 1.5rem;
+    color:var(--text);
+  }
+  
+  .about-card h2, .skills-card h2, .experience-card h2{
+    margin:0 0 .75rem;
+    font-weight:700;
+  }
+  
+  /* Image with text wrap */
+  .profile-img{
+    float:left;                    /* lets paragraph wrap around image */
+    width: clamp(200px, 45%, 260px);
+    min-height: 260px;
+    height:auto;
+    border-radius:12px;
+    margin:0 1rem 1rem 0;
+    object-fit:cover;
+    shape-outside: inset(0 round 12px); /* nicer wrap curve (optional) */
+  }
+  
+  /* Make the button sit below the wrapped text cleanly */
+  .about-card .btn-primary{ clear: both; }
+  
+  /* Brand button */
+  .btn-primary{
+    display:inline-block;
+    background: var(--brand-blue);
+    color:#0b0b0b;
+    border:2px solid var(--brand-blue);
+    border-radius:10px;
+    padding:.6rem 1rem;
+    font-weight:600;
+    text-decoration:none;
+    transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  }
+  .btn-primary:hover{
+    transform: translateY(-1px);
+    background: var(--brand-orange);
+    border-color: var(--brand-orange);
+  }
+  
+  /* Experience list */
+  .xp-list{ list-style:none; margin:0; padding:0; }
+  .xp-item{
+    display:grid;
+    grid-template-columns: 40px 1fr; /* logo + content */
+    gap:.75rem 1rem;
+    padding-bottom:1.25rem;
+  }
+  .xp-item + .xp-item{ border-top:1px solid rgba(0,0,0,.08); padding-top:1.25rem; }
+  
+  .xp-logo{ width:40px; height:40px; border-radius:6px; object-fit:cover; }
+  .xp-title{ font-weight:600; }
+  .xp-meta{ color:var(--muted); font-size:.9rem; margin:.15rem 0 .5rem; }
+  .xp-bullets{ margin:0; padding-left:1.1rem; }
+  .xp-bullets li{ margin-bottom:.35rem; }
+  
+  /* Small screens tweak */
+  @media (max-width:360px){
+    .profile-img{ width:48%; height: 80%;}
+  }
+  

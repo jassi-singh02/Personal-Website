@@ -1,0 +1,94 @@
+<div class="container px-4 py-5">
+        <div class="row row-cols-1 row-cols-md-2 g-5 align-items-stretch">
+          
+          <!-- LEFT: About Me -->
+            <div class="col border-bottom border-md-0 border-end-md">
+
+            <img src="./aboutimage.jpg" alt="Image of Jaskaran" class="img-fluid rounded-3 float-start me-md-3 mb-3" style="max-width: 220px; height: auto;">
+
+            <h2 class="fw-bold text-body-emphasis mb-3">About Me</h2>
+
+            <p class="text-body-secondary"> I am an aspiring software developer picking up new skills and projects along the way. Besides that, I have many other interests such as music and film. Feel free to learn more below! </p>
+
+            <div class="pb-4">
+              <a href="./about.html" class="btn btn-primary btn-lg">More About Me</a>
+            </div>
+
+            </div>
+
+          <!-- RIGHT: Experience -->
+          <div class="col">
+            <h2 class="fw-bold text-body-emphasis mb-3">Experience</h2>
+            <ul class="list-unstyled m-0">
+    
+              <!-- Item 1 -->
+              <li class="d-flex align-items-start gap-3 pb-4">
+                <img src="images/company1-logo.png" alt="Company 1 logo"
+                     class="flex-shrink-0 rounded"
+                     style="width:40px;height:40px;object-fit:cover;">
+                <div>
+                  <div class="fw-semibold">Software Engineer — Company 1</div>
+                  <div class="small text-body-secondary mb-2">Jan 2024 – Present · City, ST</div>
+                  <ul class="mb-0">
+                    <li>Built features in React/TypeScript; improved LCP by 35%.</li>
+                    <li>Designed CI/CD pipelines with Docker + GitHub Actions.</li>
+                    <li>Contributed to design system + component library.</li>
+                  </ul>
+                </div>
+              </li>
+    
+              <!-- Item 2 -->
+              <li class="d-flex align-items-start gap-3 pb-4">
+                <img src="images/company2-logo.png" alt="Company 2 logo"
+                     class="flex-shrink-0 rounded"
+                     style="width:40px;height:40px;object-fit:cover;">
+                <div>
+                  <div class="fw-semibold">IT Field Technician — Company 2</div>
+                  <div class="small text-body-secondary mb-2">Aug 2023 – Dec 2023 · City, ST</div>
+                  <ul class="mb-0">
+                    <li>Imaged & deployed 100+ machines using automation.</li>
+                    <li>Troubleshot networking + scanner issues on site.</li>
+                    <li>Maintained user onboarding + SharePoint workflows.</li>
+                  </ul>
+                </div>
+              </li>
+    
+            </ul>
+          </div>
+    
+        </div>
+      </div>
+
+
+
+
+#title {
+    border: 1px solid black;
+    background-color: lightblue;
+  }
+
+.text-orange{
+    color: orangered;
+}
+
+#about {
+    border: 1px solid black;
+    background-color: lightsalmon;
+}
+
+#about {
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+}
+
+#about > #moreAbout {
+    grid-row: 1 / 3;
+    grid-column: 1 / 6;
+}
+
+#about > #experiences {
+    grid-row: 3 / 6;
+    grid-column: 1 / 6;
+}
+
