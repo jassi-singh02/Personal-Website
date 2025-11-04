@@ -143,3 +143,11 @@
     .profile-img{ width:48%; height: 80%;}
   }
   
+  #project{
+    background-color: lightblue;
+  }
+
+  .card-group{
+    display: flex;
+    flex-direction: row;
+  }
