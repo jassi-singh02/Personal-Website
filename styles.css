@@ -47,7 +47,7 @@
     border-top:2px solid var(--border);
     padding-top:2rem;
   }
-  
+
   /* Desktop: 2 columns + vertical divider */
   @media (min-width: 768px){
     .about-grid{
@@ -143,11 +143,144 @@
     .profile-img{ width:48%; height: 80%;}
   }
   
-  #project{
-    background-color: lightblue;
+  /* Projects section */
+#project {
+  background-color: lightblue;          /* keep if you like */
+  padding: 2.5rem 1rem;                 /* space from edges */
+  border-top: 2px solid #000;           /* optional section separators */
+  border-bottom: 2px solid #000;
+}
+
+#project > h1 {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin: 0 0 1.25rem;
+}
+
+/* Use GRID for easy row/column swap + equal widths */
+#project .card-group {
+  display: grid;
+  grid-template-columns: 1fr;           /* mobile: one per row */
+  gap: 1rem;                            /* space between cards */
+  max-width: 1100px;                    /* keeps row readable on huge screens */
+  margin: 0 auto;                       /* center the grid */
+  padding: .25rem;                      /* little breathing room inside */
+}
+
+/* Cards: same size, tidy internals */
+#project .card {
+  display: flex;                        /* equalize heights */
+  flex-direction: column;
+  border: 2px solid #000;               /* card outline */
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;                     /* trim image corners */
+}
+
+/* Uniform image height across cards */
+#project .card-img-top {
+  width: 100%;
+              /* same height for all images */
+  object-fit: cover;                    /* crop nicely if sizes differ */
+  display: block;
+}
+
+/* Make bodies equal height so bottoms align */
+#project .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding: .9rem .95rem 1rem;
+  flex: 1;                              /* fills remaining height */
+}
+
+#project .card-title a {
+  text-decoration: none;
+  font-weight: 700;
+}
+#project .card-title a:hover {
+  text-decoration: underline;
+}
+
+/* --- Black divider BETWEEN CARDS --- */
+/* Mobile: horizontal line between stacked cards */
+#project .card + .card {
+  border-top: 2px solid #000;
+}
+
+/* Desktop: 3 cards in a row with vertical dividers */
+@media (min-width: 768px) {
+  #project .card-group {
+    grid-template-columns: repeat(3, minmax(220px, 1fr)); /* row */
+    gap: 1.25rem;
   }
 
-  .card-group{
-    display: flex;
-    flex-direction: row;
+  /* remove mobile’s top divider; add vertical dividers instead */
+  #project .card + .card { border-top: none; }
+  #project .card:not(:first-child) {
+    border-left: 2px solid #000;        /* black border between cards */
   }
+}
+
+#footer {
+  background: var(--card-bg);
+  background-color: lightsalmon;
+  border-top: 2px solid var(--border);
+  padding: 3rem 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  color: var(--text);
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-title {
+  margin: 0 0 .5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.email-link {
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Socials row */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: .5rem;
+}
+
+.footer-icon {
+  color: var(--text);
+  transition: transform 0.15s ease;
+}
+.footer-icon:hover {
+  transform: translateY(-2px);
+  color: var(--brand-blue);
+}
+
+.copyright {
+  margin-top: .75rem;
+  font-size: .9rem;
+  color: black;
+}
