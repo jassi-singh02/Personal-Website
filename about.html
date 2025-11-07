@@ -49,7 +49,7 @@
         /* 850px max width; 90% of screen on smaller devices */
         margin-inline: auto;
         box-shadow: 0 3px 0 rgba(0,0,0,.05);
-        }
+      }
 
       /* Typography */
       .essay-content h1 {
@@ -57,7 +57,7 @@
         margin-bottom: 1.8rem;
         font-size: 2rem;
         font-weight: 800;
-        }
+      }
 
       .essay-content p {
         font-size: 1rem;
@@ -67,7 +67,7 @@
         max-width: 100%;   /* full width inside container */
         text-align: left;
         text-indent: 1.25rem;
-        }
+      }
 
       /* Optional: evenly spaced left indent on paragraphs */
       .essay-content p + p {
@@ -83,74 +83,78 @@
 
 
       #links {
-background: #fff7f2; /* soft variant of your lightsalmon */
-padding: 3rem 1rem;
-border: 1px solid black;
-}
-.social-media { max-width: 1100px; margin: 0 auto;}
-.social-media h1 { text-align: center; margin-bottom: 1.5rem; font-size: clamp(1.4rem, 2.5vw, 2rem); }
+        background: #fff7f2;
+        padding: 3rem 1rem;
+        border: 1px solid black;
+      }
+
+      .social-media { max-width: 1100px; margin: 0 auto;}
+      .social-media h1 { text-align: center; margin-bottom: 1.5rem; font-size: clamp(1.4rem, 2.5vw, 2rem); }
 
 
-/* Grid layout: thirds on desktop, stack on mobile */
-.social-links {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 1rem;
-}
-@media (max-width: 700px) {
-.social-links { grid-template-columns: 1fr; }
-}
+      /* Grid layout: thirds on desktop, stack on mobile */
+      .social-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      
+      @media (max-width: 700px) {
+        .social-links { grid-template-columns: 1fr; }
+      }
 
 
-/* Card-like links */
-.link-card {
-display: grid;
-grid-template-columns: auto 1fr;
-align-items: center;
-gap: 1rem;
-padding: 1.25rem 1.25rem;
-border-radius: 1rem;
-text-decoration: none;
-border: 1px solid rgba(0,0,0,0.06);
-box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-background: #fff;
-}
-.link-card:hover {
-transform: translateY(-2px);
-box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-border-color: rgba(0,0,0,0.12);
-}
+      /* Card-like links */
+      .link-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 1.25rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        border: 1px solid rgba(0,0,0,0.06);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+        background: #fff;
+      }
+
+      .link-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        border-color: rgba(0,0,0,0.12);
+      }
 
 
-/* Icon treatment */
-.link-card .icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 12px; }
-.link-card .icon svg { width: 28px; height: 28px; fill: currentColor; }
+      /* Icon treatment */
+      .link-card .icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 12px; }
+      .link-card .icon svg { width: 28px; height: 28px; fill: currentColor; }
 
 
-/* Copy */
-.link-card .copy h2 { margin: 0; font-size: 1.125rem; line-height: 1.2; }
-.link-card .copy p { margin: .25rem 0 0; color: #5b5b5b; font-size: .95rem; }
+      /* Copy */
+      .link-card .copy h2 { margin: 0; font-size: 1.125rem; line-height: 1.2; }
+      .link-card .copy p { margin: .25rem 0 0; color: #5b5b5b; font-size: .95rem; }
 
 
-/* Brand skins */
-.link-card.spotify { color: #0a4; }
-.link-card.spotify .icon { background: rgba(0, 170, 68, .12); }
+      /* Brand skins */
+      .link-card.spotify { color: #0a4; }
+      .link-card.spotify .icon { background: rgba(0, 170, 68, .12); }
 
 
-.link-card.instagram { color: #c13584; }
-.link-card.instagram .icon { background: rgba(193, 53, 132, .12); }
+      .link-card.instagram { color: #c13584; }
+      .link-card.instagram .icon { background: rgba(193, 53, 132, .12); }
 
 
-.link-card.letterboxd { color: #0ea5a6; }
-.link-card.letterboxd .icon { background: rgba(14, 165, 166, .12); }
+      .link-card.letterboxd { color: #0ea5a6; }
+      .link-card.letterboxd .icon { background: rgba(14, 165, 166, .12); }
 
 
-/* Make the entire block a comfy tap target on mobile */
-@media (hover: none) {
-.link-card { padding: 1.1rem; }
-.link-card .icon { width: 48px; height: 48px; }
-}
+      /* Make the entire block a comfy tap target on mobile */
+      @media (hover: none) {
+        .link-card { padding: 1.1rem; }
+        .link-card .icon { width: 48px; height: 48px; }
+      }
+
     </style>
     </head>
     <body>
@@ -194,77 +198,59 @@ border-color: rgba(0,0,0,0.12);
           </div>
         </div>
         </section>
-
-
-        <!--<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
-<section id="links">
-  <div class="social-media">
-  <h1>Social Medias</h1>
-  
-  
-  <nav class="social-links" aria-label="Social profiles">
-  <!-- Spotify -->
-  <a class="link-card spotify" href="https://open.spotify.com/user/j15k171n?si=93ee0a0c50c94014" target="_blank" rel="noopener noreferrer">
-  <div class="icon" aria-hidden="true">
-  <!-- Spotify SVG -->
-  <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 0a12 12 0 1 0 0 24A12 12 0 0 0 12 0Zm5.28 17.37a.86.86 0 0 1-1.18.3 13.83 13.83 0 0 0-8.65-1.05.86.86 0 0 1-.42-1.67 15.55 15.55 0 0 1 9.74 1.17.86.86 0 0 1 .51 1.25Zm1.59-3.26a1.07 1.07 0 0 1-1.48.38 16.83 16.83 0 0 0-10.54-1.28 1.06 1.06 0 1 1-.49-2.07 18.93 18.93 0 0 1 11.86 1.43 1.06 1.06 0 0 1 .65 1.54Zm.15-3.43a1.26 1.26 0 0 1-1.73.45 20.8 20.8 0 0 0-12.76-1.59 1.26 1.26 0 1 1-.59-2.45 23.32 23.32 0 0 1 14.31 1.79 1.26 1.26 0 0 1 .77 1.8Z"/>
-  </svg>
-  </div>
-  <div class="copy">
-  <h2>Spotify</h2>
-  <p>Follow me here for my playlists and recent listens</p>
-  </div>
-  </a>
-  
-  
-  <!-- Instagram -->
-  <a class="link-card instagram" href="https://www.instagram.com/jaska_.singh/" target="_blank" rel="noopener noreferrer">
-  <div class="icon" aria-hidden="true">
-  <!-- Instagram SVG -->
-  <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm6.25-2.5a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18.25 7Z"/>
-  </svg>
-  </div>
-  <div class="copy">
-  <h2>Instagram</h2>
-  <p>Feel free to follow me at my personal profile</p>
-  </div>
-  </a>
-  
-  
-  <!-- Letterboxd -->
-  <a class="link-card letterboxd" href="https://boxd.it/4Rk3d" target="_blank" rel="noopener noreferrer">
-  <div class="icon" aria-hidden="true">
-  <!-- Letterboxd SVG (simplified logomark) -->
-  <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-  <rect x="3" y="6" width="18" height="12" rx="6"/>
-  <circle cx="9" cy="12" r="3.25"/>
-  <circle cx="15" cy="12" r="3.25"/>
-  </svg>
-  </div>
-  <div class="copy">
-  <h2>Letterboxd</h2>
-  <p>Where I track films and write mini reviews</p>
-  </div>
-  </a>
-  </nav>
-  </div>
-  </section>
+      <section id="links">
+        <div class="social-media">
+        <h1>Social Medias</h1>
+        
+        
+        <nav class="social-links" aria-label="Social profiles">
+        <!-- Spotify -->
+        <a class="link-card spotify" href="https://open.spotify.com/user/j15k171n?si=93ee0a0c50c94014" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">
+        <!-- Spotify SVG -->
+        <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0a12 12 0 1 0 0 24A12 12 0 0 0 12 0Zm5.28 17.37a.86.86 0 0 1-1.18.3 13.83 13.83 0 0 0-8.65-1.05.86.86 0 0 1-.42-1.67 15.55 15.55 0 0 1 9.74 1.17.86.86 0 0 1 .51 1.25Zm1.59-3.26a1.07 1.07 0 0 1-1.48.38 16.83 16.83 0 0 0-10.54-1.28 1.06 1.06 0 1 1-.49-2.07 18.93 18.93 0 0 1 11.86 1.43 1.06 1.06 0 0 1 .65 1.54Zm.15-3.43a1.26 1.26 0 0 1-1.73.45 20.8 20.8 0 0 0-12.76-1.59 1.26 1.26 0 1 1-.59-2.45 23.32 23.32 0 0 1 14.31 1.79 1.26 1.26 0 0 1 .77 1.8Z"/>
+        </svg>
+        </div>
+        <div class="copy">
+        <h2>Spotify</h2>
+        <p>Follow me here for my playlists and recent listens</p>
+        </div>
+        </a>
+        
+        
+        <!-- Instagram -->
+        <a class="link-card instagram" href="https://www.instagram.com/jaska_.singh/" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">
+        <!-- Instagram SVG -->
+        <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm6.25-2.5a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18.25 7Z"/>
+        </svg>
+        </div>
+        <div class="copy">
+        <h2>Instagram</h2>
+        <p>Feel free to follow me at my personal profile</p>
+        </div>
+        </a>
+        
+        
+        <!-- Letterboxd -->
+        <a class="link-card letterboxd" href="https://boxd.it/4Rk3d" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">
+        <!-- Letterboxd SVG (simplified logomark) -->
+        <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="6" width="18" height="12" rx="6"/>
+        <circle cx="9" cy="12" r="3.25"/>
+        <circle cx="15" cy="12" r="3.25"/>
+        </svg>
+        </div>
+        <div class="copy">
+        <h2>Letterboxd</h2>
+        <p>Where I track films and write mini reviews</p>
+        </div>
+        </a>
+        </nav>
+        </div>
+        </section>
     </body>
 </html>
