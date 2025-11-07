@@ -11,7 +11,7 @@
   /* Hero section you already have */
   #title{
     border:1px solid var(--border);
-    background-color: lightblue; /* keep or swap: var(--brand-blue) with transparency if you like */
+    background-color: #E9F6FA; /* keep or swap: var(--brand-blue) with transparency if you like */
   }
   
   .text-orange{ color: orangered; /* or var(--brand-orange) */ }
@@ -21,7 +21,7 @@
   /* --- About section layout (MERGE your duplicate #about into this) --- */
   #about{
     border:1px solid var(--border);
-    background: lightsalmon; /* temp; replace with var(--card-bg) or remove if you prefer cards only */
+    background: #FFF1E8; /* temp; replace with var(--card-bg) or remove if you prefer cards only */
     padding-block: 3rem;
   }
   
@@ -145,7 +145,7 @@
   
   /* Projects section */
 #project {
-  background-color: lightblue;          /* keep if you like */
+  background-color: #E9F6FA;          /* keep if you like */
   padding: 2.5rem 1rem;                 /* space from edges */
   border-top: 2px solid #000;           /* optional section separators */
   border-bottom: 2px solid #000;
@@ -225,7 +225,7 @@
 
 #footer {
   background: var(--card-bg);
-  background-color: lightsalmon;
+  background-color: #FFF1E8;
   border-top: 2px solid var(--border);
   padding: 3rem 1rem 2rem;
   display: flex;
