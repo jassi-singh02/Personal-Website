@@ -1,0 +1,57 @@
+/* Mobile-first responsive tweaks for About Page */
+
+
+@media (max-width: 768px) {
+    #header-about {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    }
+    
+    
+    #header-about img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    }
+    
+    
+    #header-about .col-lg-6 {
+    margin: 0 auto;
+    max-width: 100%;
+    }
+    
+    
+    #header-about h1 {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    }
+    
+    
+    #header-about p.lead {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+    }
+    
+    
+    .essay-container {
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    border-width: 1px;
+    }
+    
+    
+    .essay-content h1 {
+    font-size: 1.6rem;
+    }
+    
+    
+    .essay-content p {
+    font-size: 0.97rem;
+    line-height: 1.55;
+    text-indent: 0.75rem;
+    }
+}
