@@ -1,11 +1,10 @@
 /* Mobile-first responsive tweaks for About Page */
 
-
+/*
 @media (max-width: 768px) {
-    #header-about {
-    flex-direction: column;
-    padding: 1.5rem 1rem;
-    text-align: center;
+    .essay-content p {
+    font-size: 0.9rem;
+    line-height: 1.55;
     }
     
     
@@ -55,3 +54,4 @@
     text-indent: 0.75rem;
     }
 }
+*/
