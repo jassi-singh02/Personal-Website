@@ -71,7 +71,9 @@ function initEssayMenu() {
     content.appendChild(essayContent);
     
     // Add click event to header to toggle content
-    header.addEventListener('click', () => {
+    // Click works on both desktop and mobile (mobile browsers convert touch to click)
+    header.addEventListener('click', (e) => {
+      e.stopPropagation();
       toggleEssay(index);
     });
     
@@ -87,8 +89,12 @@ function initEssayMenu() {
 // Toggle essay dropdown
 function toggleEssay(index) {
   const tab = document.querySelector(`.essay-tab[data-index="${index}"]`);
+  if (!tab) return; // Safety check
+  
   const header = tab.querySelector('.essay-tab-header');
   const content = tab.querySelector('.essay-tab-content');
+  
+  if (!header || !content) return; // Safety check
   
   // Check if currently active
   const isActive = header.classList.contains('active');
@@ -109,6 +115,20 @@ function toggleEssay(index) {
   } else {
     header.classList.add('active');
     content.classList.add('active');
+    
+    // On mobile, scroll to show the expanded content after transition starts
+    const isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
+    if (isMobile) {
+      // Wait for transition to start, then scroll
+      setTimeout(() => {
+        const rect = header.getBoundingClientRect();
+        const scrollPosition = window.scrollY + rect.top - 10; // 10px offset from top
+        window.scrollTo({
+          top: Math.max(0, scrollPosition),
+          behavior: 'smooth'
+        });
+      }, 150);
+    }
   }
 }
 
